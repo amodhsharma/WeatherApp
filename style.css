@@ -1,0 +1,19 @@
+*{  /* * is calles the universal selector, it selects all the elements in the html document */
+    margin: 0;
+    padding: 0;
+    font-family: "Radio Canada Big", sans-serif;
+    font-optical-sizing: auto;
+    box-sizing: border-box;
+    /* this property allows us to include padding and border in an elements's total width and height */
+    /* if directly border-box is used on an element, padding and border are included in the width and height, which makes it easier for deployment */
+    
+}
+
+body{
+    background-color: #222;
+}
+
+.card{  /* .card as we want it to apply to all elements having class as card */
+    
+
+}
