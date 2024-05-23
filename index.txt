@@ -1,0 +1,16 @@
+<!doctype html> <!--Document type declaration, tells the browser that a html 5 document is generated for correct rendering-->
+<html lang="en">    <!--Sets language to english so that search engines and screen readers can understand better-->
+    <head>  <!--opens the head of the page, which contains the meta data, title, characterset, linked stylesheets etc
+        <title>Weather App</title>  <!--Shows the title to be set on the main screen title area-->
+            <!--required meta tags-->
+            <meta charset="utf-8">  <!--Specifies character encoding to utf 8 which can represent almost any and all characters used in modern day computing, which makes it a better choice-->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!--specifies how the page should be displayed new devices, the width should be equal to the width of the device and the initial zoom level is set to 1-->
+
+            <!--Bootstrap css-->
+            <link rel ="stylesheet" href="style.css">   <!--links external css stylesheet to the html file, the rel defines the relation, and the href defines the url to the css file  -->
+            <!-- the name stylesheet MUST be used as using any other name will cause an issue with the browser not recognizing it-->
+    </head>
+    <body><!--opens body tag which contains contents visible to user -->
+
+    </body>
+</html> 
