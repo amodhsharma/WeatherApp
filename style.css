@@ -14,6 +14,48 @@ body{
 }
 
 .card{  /* .card as we want it to apply to all elements having class as card */
-    
+    width: 100%; /* here we are taking it to be 90% in reference to the parent element which is the body tag, the body tag observed 100% of the screen value, so we want our card to take up 90% of it*/
+    max-width: 470px;
+    background: linear-gradient(120deg,#7ac1f8,#dcedfd); /*background sets the color of the background of the site*/
+    color: #171e24; /*color sets the color of the text */
+    margin: 100px auto 0 ; /*sets the margin  the card element from the edge of the screen 
+    it takes upto 4 values, the first is top margin, 2nd is left and right margin, and 3rd is bottom margin
+    here 100 is the top, left and right is auto bottom margin is 0*/
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center; /* aligns all the text to the centre*/
+}
 
+.search{
+    width: 100%;
+    display: flex;  /* an element with this tag becomes flex element and items in it within it become flex elements*/
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input{
+    border: 0;
+    outline: 0;
+    background-color: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1; /*extends the search box till the search icon*/
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+.search button{
+    border: 0;
+    outline: 0;
+    background-color: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer; /* changes the pointer to a curson when we hover it over the button */
+}
+
+.search button img{
+    width: 16px;
 }
