@@ -59,3 +59,53 @@ body{
 .search button img{
     width: 16px;
 }
+
+.weather-icon{
+    width: 170 px; /* wont make a lot of difference */
+    margin-top: 30 px; /* will show a gap of 30 px fromt he top most element */
+}
+
+.weather h1{    /*tagets all h1 tag elements in weather tag */
+    font-size: 65px;
+    font-weight: 500;   /* defines the boldness of the font, can be defined through keywords or numericals */
+}
+
+.weather h2{    /*tagets all h1 tag elements in weather tag */
+    font-size: 40px;
+    font-weight: 400;   /* defines the boldness of the font, can be defined through keywords or numericals */
+    margin-top: -10px;  /* larger the negative number, smaller the gap between the top and the bottom element, if it gets a bit too big, it may even overlap the top evelement */
+}
+
+.details{
+    display: flex;  /*arranges it side by side */
+    align-items: center;    /* didnt do much */
+    justify-content: space-between; /* justified content with like equal space bw them and around them */
+    padding: 0 20px;    /* first value represents top and bottom and the second value represents the left and right */
+    /* the larger the secong value, the closer they will be to each other, as we are treating them as one element so 100 px means that it will have a padding ( collectively 
+    of 100 pixels each from the left and right side */
+    /* IT IS AN IMPORTANT ATTRIBUTE */
+    /* SHOWS THE GAP BETWEEN THE HUMIDITY AND WIND TABS */
+
+    /* what does the first value do tho? */
+
+    margin-top: 30px;   /* shows the distance of the detail elements from above element, in this case its 30 pixels */
+}
+
+.col {  /* edits the details tag, individually, not as a group */
+    display: flex;  /* makes the text and images side by side */
+    align-items: center;
+    text-align: left;   /* aligns the text to the left */
+}
+
+.col img{   /* edits all image tags in the col section*/
+    width: 50px;
+    margin-right: 10px; /*shows the distance of the images from the leftmost element, here text as 10 pixels */
+
+}
+
+.humidity, .wind{
+    font-size: 30px;
+    margin-top: -5px;   /*the bigger the number infront of the minus sign, the closer the text will be to the top */
+    /*can omit this if we want too cuz it isnt showing significant difference */
+     
+}
