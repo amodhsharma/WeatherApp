@@ -14,3 +14,5 @@ The files of html code, txt, css and python are all accessible through the githu
 > 
 # Prompt for generating the txt file, python script and bash code ( for running in the terminal ) from GPT 
 "I have an index.html where I want to put a private api key and url. Create a python script which takes it those as arguments and generates an index.html file with the arguments formatted in the correct place"
+
+Reference file - https://youtu.be/MIYQR-Ybrn4?si=l0Jqtnww9-9iULzG
