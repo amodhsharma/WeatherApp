@@ -43,8 +43,8 @@
             </div>
         </div>
         <script>
-            const apiKey={{API_KEY}};
-            const apiURL={{API_URL}};
+            const apiKey={{apiKey}};
+            const apiUrl={{apiUrl}};
         </script>
     </body>
 </html>

@@ -1,0 +1,88 @@
+function declaration- The function checkWeather is declared as an async function
+
+fetching details - const response = await fetch(apiUrl + '&appid=${apiKey}');
+    This line uses the fetch API to make an HTTP GET request to a specified apiUrl with an appended apiKey for authentication.
+    The await keyword pauses the execution of the function until the fetch call completes and returns a response.
+    The fetch function returns a Promise that resolves to the Response object representing the response to the request.
+
+Processing details - var data = await response.json();
+    The response.json() method reads the response body and parses it as JSON.
+    The await keyword pauses the function execution until the JSON parsing is complete.
+    The result is stored in the data variable, which will be a JavaScript object representing the parsed JSON data.
+
+Logging the data - console.log(data);
+    This line logs the data to the console, allowing the developer to see the fetched and parsed weather data.
+
+invoking the function - checkWeather();
+    this invokes the function 
+----------------------------------------------------------------
+
+Note - the functionality can be improved by adding a try - catch block to more effectively manage error handling
+
+here is how it would be with the same 
+
+const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=London';
+const apiKey = 'your_api_key';
+
+async function checkWeather(){
+    try {
+        const response = await fetch(apiUrl + '&appid=' + apiKey);
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        var data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error('There has been a problem with your fetch operation:', error);
+    }
+}
+
+checkWeather();
+
+----------------------------------------------------------------
+
+The basic structure of an api call and async function without error handling call would be - 
+
+async function makeAsyncRequest(url, options = {}) {    //function definition
+    const response = await fetch(url, options);     //fetching data
+    const data = await response.json(); // Assuming the response is in JSON format    //fetching data  
+    return data;        //fetching data
+}
+
+A user sensitive example - 
+
+(async () => {
+    const apiUrl = 'https://api.example.com/data';
+    const apiKey = 'your_api_key_here';
+    const options = {
+        method: 'GET', // or 'POST', 'PUT', etc.
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${apiKey}`
+        }
+        // body: JSON.stringify(data) // Uncomment this for POST/PUT requests
+    };
+
+    const data = await makeAsyncRequest(apiUrl, options);
+    console.log('Data received:', data);
+})();
+
+----------------------------------------------------------------
+
+one might be confused what OPTIONS are ?
+
+The options parameter in the fetch function is a powerful way to customize HTTP requests 
+in JavaScript, allowing you to set methods, headers, bodies, and other request parameters. 
+This makes your fetch calls flexible and adaptable to various use cases.
+
+The output of the fetch call can be significantly different depending on whether the options object is used or not. 
+
+By default, when options are not specified:
+HTTP Method: The request method is GET.
+Headers: No custom headers are included.
+Body: No body content can be sent.
+
+When options are used, the request can be customized:
+HTTP Method: Can be GET, POST, PUT, DELETE, etc.
+Headers: Custom headers like Authorization, Content-Type, etc., can be included.
+Body: Body content can be sent (usually with POST or PUT requests).

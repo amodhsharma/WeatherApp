@@ -99,7 +99,7 @@ body{
 
 .col img{   /* edits all image tags in the col section*/
     width: 50px;
-    margin-right: 10px; /*shows the distance of the images from the leftmost element, here text as 10 pixels */
+    margin-right: 15px; /*shows the distance of the images from the leftmost element, here text as 10 pixels */
 
 }
 
@@ -109,3 +109,16 @@ body{
     /*can omit this if we want too cuz it isnt showing significant difference */
      
 }
+
+.weather { 
+    display: none;
+}
+
+.error{ /*takes the inherent color of the card - blac, defined above*/
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;  /* only displays error when a wrong city is entered and not 24/7 */
+}
+

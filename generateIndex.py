@@ -7,8 +7,8 @@ def generate_html(api_key, api_url, template_file, output_file):
             content = file.read()
 
         # Replace placeholders with actual values
-        content = content.replace("{API_KEY}", f"\"{api_key}\"")
-        content = content.replace("{{API_URL}}", f"\"{api_url}\"")
+        content = content.replace("{{apiKey}}", f"\"{apiKey}\"")
+        content = content.replace("{{apiUrl}}", f"\"{apiUrl}\"")
 
         # Write the modified content to the output file
         with open(output_file, 'w') as file:
@@ -20,12 +20,12 @@ def generate_html(api_key, api_url, template_file, output_file):
 
 if __name__ == "__main__":
     if len(sys.argv) != 5:
-        print("Usage: python generate_html.py <api_key> <api_url> <template_file> <output_file>")
+        print("Usage: python generate_html.py <apiKey> <apiUrl> <template_file> <output_file>")
         sys.exit(1)
 
-    api_key = sys.argv[1]
-    api_url = sys.argv[2]
+    apiKey = sys.argv[1]
+    apiUrl = sys.argv[2]
     template_file = sys.argv[3]
     output_file = sys.argv[4]
 
-    generate_html(api_key, api_url, template_file, output_file)
+    generate_html(apiKey, apiUrl, template_file, output_file)
